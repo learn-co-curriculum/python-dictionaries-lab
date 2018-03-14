@@ -1,442 +1,113 @@
 
-# Introduction to lists
+# Dictionaries lab
 
-So far we have worked with individual pieces of data like the string `hello`, then with variables we saw how to give this data a name with variables.  Well in this lesson, we'll see how we can group data together with lists.  
+### Introduction
 
-### Creating a list 
+Ok, let's start off with our google spreadsheet of data.
 
-A list is our first form of a collection.  A collection is just a way of grouping data together, and lists certainly accomplish this.  For example, let's consider the top cities to travel to according to Travel and Leisure.  We'll see it below, but we must stay focused on Python and data! 
+### Objectives
 
-#### Travel Locations
-1. Solta
-2. Greenville
-3. Buenos Aires
-4. Los Cabos
-5. Walla Walla Valley
-6. Marakesh
-7. Albuquerque
-8. Archipelago Sea
-9. Iguazu Falls
-10. Salina Island
-11. Toronto
-12. Pyeongchang
+### Working with a single dictionary
 
-Ok, and this is how we express this in Python.
+Here is a dictionary representing the city of Greenville, North Carolina.  The area is in kilometers squared.  Let's retrieve the population of the city and assign it to the variable `greenville_population`.
 
 
 ```python
-['Solta', 'Greenville', 'Buenos Aires', 'Los Cabos', 'Walla Walla Valley', 'Marakesh', 'Albuquerque', 'Archipelago Sea', 'Iguazu Falls', 'Salina Island', 'Toronto', 'Pyeongchang']
+greenville = {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 84554}
 ```
 
-
-
-
-    ['Solta',
-     'Greenville',
-     'Buenos Aires',
-     'Los Cabos',
-     'Walla Walla Valley',
-     'Marakesh',
-     'Albuquerque',
-     'Archipelago Sea',
-     'Iguazu Falls',
-     'Salina Island',
-     'Toronto',
-     'Pyeongchang']
-
-
-
-So we indicate that we are initializing a `list` by placing a bracket, `[` (located above of the return key), and end the list with a closing bracket `']'`.  To separate each item in the list, called an element, we place a comma.
+> Remember to press shift + enter
 
 
 ```python
-['Croatia', 'USA', 'Argentina', 'Mexico', 'USA', 'Morocco', 'New Mexico', 'Finland', 'Argentina', 'Italy', 'Canada', 'South Korea']
+greenville_population = None # change None
+greenville_population # 84554
 ```
 
-
-
-
-    ['Croatia',
-     'USA',
-     'Argentina',
-     'Mexico',
-     'USA',
-     'Morocco',
-     'New Mexico',
-     'Finland',
-     'Argentina',
-     'Italy',
-     'Canada',
-     'South Korea']
-
-
-
-And of course, we can set each list equal to variable so that we can name each list.
+Now retrieve the area of Greenville and assign it to the variable `area`.
 
 
 ```python
-top_travel_cities = ['Solta', 'Greenville', 'Buenos Aires', 'Los Cabos', 'Walla Walla Valley', 'Marakesh', 'Albuquerque', 'Archipelago Sea', 'Iguazu Falls', 'Salina Island', 'Toronto', 'Pyeongchang']
+area = None
+area # 68
 ```
+
+Now let's take a look at all of the keys in the `greenville` dictionary and coerce them into a list.  Assign this variable to the list `city_attributes`.
 
 
 ```python
-top_travel_cities
+city_keys = None
+city_keys # ['Area', 'City', 'Country', 'Population']
 ```
 
-
-
-
-    ['Solta',
-     'Greenville',
-     'Buenos Aires',
-     'Los Cabos',
-     'Walla Walla Valley',
-     'Marakesh',
-     'Albuquerque',
-     'Archipelago Sea',
-     'Iguazu Falls',
-     'Salina Island',
-     'Toronto',
-     'Pyeongchang']
-
-
+Now let's get all of the values in our greenville dictionary and coerce it into a list.  Assign that list to the variable `city_values`.
 
 
 ```python
-countries_of_top_cities = ['Croatia', 'USA', 'Argentina', 'Mexico', 'USA', 'Morocco', 'New Mexico', 'Finland', 'Argentina', 'Italy', 'Canada', 'South Korea']
+city_values = None
+city_values # [68, 'Greenville', 'USA', 84554]
 ```
 
-### Accessing Elements of Lists
+### Working with multiple cities
 
-Now our `top_travel_cities` list is contains multiple elements.  And just like we numbered the elements of a list with text:
+Once again, we will get our data from a Google Sheet of [Travel Cities and Countries](https://docs.google.com/spreadsheets/d/1BTJMMFH9t4p5UmHj5kiC6PGfMN6yaaaZkocx0mDqTK0/edit#gid=0).  
 
-1. Solta
-2. Greenville
-3. Buenos Aires
+![](./countries-cities.png)
 
-A list in Python also assigns a number to each element.
+We already followed the steps of the previous lesson to download the spreadsheet and move it to the current folder.  You can find the file [in the github repository](https://github.com/learn-co-curriculum/python-lists-lab).
+
+Now that we have this file in the folder we are working with, we can get this data into Python code.  We have written the code for reading excel into Python for you.
 
 
 ```python
-top_travel_cities
+import pandas
+file_name = './cities.xlsx'
+travel_df = pandas.read_excel(file_name)
+cities = travel_df.to_dict('records')
 ```
 
-
-
-
-    ['Solta',
-     'Greenville',
-     'Buenos Aires',
-     'Los Cabos',
-     'Walla Walla Valley',
-     'Marakesh',
-     'Albuquerque',
-     'Archipelago Sea',
-     'Iguazu Falls',
-     'Salina Island',
-     'Toronto',
-     'Pyeongchang']
-
-
+Cool.  We have them!
 
 
 ```python
-top_travel_cities[0]
+cities
 ```
 
+Ok, so the list of countries associated with each city has been assigned to the variable `cities`.  Now we will work with reading and manipulating this list of cities.
 
+### Working with our list of cities
 
-
-    'Solta'
-
-
-
-In the above line we are referencing a list and then using the brackets to access specific elements of our list.  We access elements in a list with the `index`, and there is a separate index for each element in the list.  It begins at the number zero, increases for every element thereafter.
-
-So to access the second element we write `top_travel_cities[1]`, and the third element is `top_travel_cities[2]`:
+First, access the third to last element and set it equal to the variable `salina`.
 
 
 ```python
-top_travel_cities[2]
+salina = None # {'Area': 27, 'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000}
+salina
 ```
 
-
-
-
-    'Buenos Aires'
-
-
-
-How would we access the last element, well we could count all of the elements in the list, and `Pyeongchang` would just be one less than that.  Or we can ask Python to start from the back in move back one.
+Now access the fourth country in the list, and set it's population equal to a variable called `los_cabos_pop`.
 
 
 ```python
-top_travel_cities[-1]
+los_cabos_pop = None
+los_cabos_pop # 287651
 ```
 
-
-
-
-    'Pyeongchang'
-
-
-
-And we can move back as many as we want.
+Now calculate the number of cities and set it equal to the variabale `city_count`.
 
 
 ```python
-top_travel_cities[-2]
+city_count = None
+city_count # 12
 ```
 
-
-
-
-    'Toronto'
-
-
-
-### Accessing Multiple Elements
-
-Now imagine that we don't want to access just one element of a list, but multiple elements at once.  Python allows us to do that as well.
+Finally, change the spelling of the South Korean city in the list to the string, `'Pyongyang'`, the alternative spelling.
 
 
 ```python
-top_travel_cities[0:2]
+cities[11]['City'] # Pyongyang
 ```
-
-
-
-
-    ['Solta', 'Greenville']
-
-
-
-Ok, now to access elements of a list, inside of our brackets we are placing two numbers separated by a colon.  The first number indicates the index of the first element we want returned.  
-
-The second number could represent the number of elements we want returned back, or maybe it represents the stopping index of the elements that we are retrieving.  Looking at our `top_travel_cities` it could be either.
-
-
-```python
-top_travel_cities
-```
-
-
-
-
-    ['Solta',
-     'Greenville',
-     'Buenos Aires',
-     'Los Cabos',
-     'Walla Walla Valley',
-     'Marakesh',
-     'Albuquerque',
-     'Archipelago Sea',
-     'Iguazu Falls',
-     'Salina Island',
-     'Toronto',
-     'Pyeongchang']
-
-
-
-So let's try a different experiment to answer our question.
-
-
-```python
-top_travel_cities[4:5]
-```
-
-
-
-
-    ['Walla Walla Valley']
-
-
-
-Ok, so that second number is not representing the number of elements we want returned.  Instead it must be used to indicate the index of the first element not selected.  
-
-
-```python
-top_travel_cities[4:6]
-```
-
-
-
-
-    ['Walla Walla Valley', 'Marakesh']
-
-
-
-This operation is called the `slice`.  So we can say we are `slicing` the elements with indices 4 and 5 in the line above.  Note that even though we are `slicing` elements, our list remains in tact.
-
-
-```python
-top_travel_cities
-```
-
-
-
-
-    ['Solta',
-     'Greenville',
-     'Buenos Aires',
-     'Los Cabos',
-     'Walla Walla Valley',
-     'Marakesh',
-     'Albuquerque',
-     'Archipelago Sea',
-     'Iguazu Falls',
-     'Salina Island',
-     'Toronto',
-     'Pyeongchang']
-
-
-
-### Changing elements
-
-Now that we read and select certain elements from lists, let's work on changing these lists.  To add a new element to a list, we can use the `append` method.
-
-
-```python
-top_travel_cities.append('San Antonio')
-```
-
-Now let's take another look at `top_travel_cities`.
-
-
-```python
-top_travel_cities
-```
-
-
-
-
-    ['Solta',
-     'Greenville',
-     'Buenos Aires',
-     'Los Cabos',
-     'Walla Walla Valley',
-     'Marakesh',
-     'Albuquerque',
-     'Archipelago Sea',
-     'Iguazu Falls',
-     'Salina Island',
-     'Toronto',
-     'Pyeongchang',
-     'San Antonio']
-
-
-
-You will see 'San Antonio' included in the list.  Now what if we accidentally add 'San Antonio' a second time to our list.  No worries, we can remove the last element from a list with the `pop` method.
-
-
-```python
-top_travel_cities.pop()
-```
-
-
-
-
-    'San Antonio'
-
-
-
-
-```python
-top_travel_cities
-```
-
-
-
-
-    ['Solta',
-     'Greenville',
-     'Buenos Aires',
-     'Los Cabos',
-     'Walla Walla Valley',
-     'Marakesh',
-     'Albuquerque',
-     'Archipelago Sea',
-     'Iguazu Falls',
-     'Salina Island',
-     'Toronto',
-     'Pyeongchang']
-
-
-
-Now if we want to change an element from the middle of the list, we can access and then reassign that element.  So for example, let's change 'Walla Walla Valley' to the number 4.
-
-
-```python
-top_travel_cities[4]
-```
-
-
-
-
-    'Walla Walla Valley'
-
-
-
-
-```python
-top_travel_cities[4] = 4
-```
-
-
-```python
-top_travel_cities
-```
-
-
-
-
-    ['Solta',
-     'Greenville',
-     'Buenos Aires',
-     'Los Cabos',
-     4,
-     'Marakesh',
-     'Albuquerque',
-     'Archipelago Sea',
-     'Iguazu Falls',
-     'Salina Island',
-     'Toronto',
-     'Pyeongchang']
-
-
-
-And our list is now changed.  It's not a sensible list right now, so let's change it back.
-
-
-```python
-top_travel_cities[4] = 'Walla Walla Valley'
-```
-
-And our list is alright.
-
-
-```python
-top_travel_cities
-```
-
-
-
-
-    ['Solta',
-     'Greenville',
-     'Buenos Aires',
-     'Los Cabos',
-     'Walla Walla Valley',
-     'Marakesh',
-     'Albuquerque',
-     'Archipelago Sea',
-     'Iguazu Falls',
-     'Salina Island',
-     'Toronto',
-     'Pyeongchang']
-
-
 
 ### Summary
 
-In this section we saw how to associate data together in a collection, called a list.  A list is similar to a list in the real world - it implies the data has some connection, and that it has an order to it.  We initialize a list with the brackets, `[]`, and separate each element by a comma.  To access elements from a list, we use the bracket accessor followed by the index of the element we want to retrieve.  And our indices began at zero and increase from there.  To add a new element to the end of the list we use the `append` method, and to remove an element from the end of a list we use `pop`.  We can change elements anywhere between by first accessing the elements and then reassigning them.
+In this section we saw how to retrieve and alter data in a dictionary.  We saw how we can retrieve a collection of information about a dictionary, like a list of it's keys and values.  We also saw how to work with a list of dictionaries.
