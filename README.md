@@ -16,7 +16,7 @@ Here is a dictionary representing the city of Greenville, North Carolina.  The a
 greenville = {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 84554}
 ```
 
-> Remember to press shift + enter
+> Remember to press shift + enter to run the code.
 
 
 ```python
@@ -32,7 +32,7 @@ area = None
 area # 68
 ```
 
-Now let's take a look at all of the keys in the `greenville` dictionary and coerce them into a list.  Assign this variable to the list `city_attributes`.
+Ok, once that is working, let's take a look at all of the keys in the `greenville` dictionary and coerce them into a list.  Assign this variable to the list `city_attributes`.
 
 
 ```python
@@ -40,7 +40,7 @@ city_keys = None
 city_keys # ['Area', 'City', 'Country', 'Population']
 ```
 
-Now let's get all of the values in our greenville dictionary and coerce it into a list.  Assign that list to the variable `city_values`.
+Alright, next let's get all of the values in our greenville dictionary and coerce it into a list.  Assign that list to the variable `city_values`.
 
 
 ```python
@@ -73,6 +73,45 @@ Cool.  We have them!
 cities
 ```
 
+
+
+
+    [{'Area': 59, 'City': 'Solta', 'Country': 'Croatia', 'Population': 1700},
+     {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 84554},
+     {'Area': 4758,
+      'City': 'Buenos Aires',
+      'Country': 'Argentina',
+      'Population': 13591863},
+     {'Area': 3750,
+      'City': 'Los Cabos',
+      'Country': 'Mexico',
+      'Population': 287651},
+     {'Area': 33,
+      'City': 'Walla Walla Valley',
+      'Country': 'USA',
+      'Population': 32237},
+     {'Area': 200, 'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850},
+     {'Area': 491,
+      'City': 'Albuquerque',
+      'Country': 'New Mexico',
+      'Population': 559277},
+     {'Area': 8300,
+      'City': 'Archipelago Sea',
+      'Country': 'Finland',
+      'Population': 60000},
+     {'Area': 672,
+      'City': 'Iguazu Falls',
+      'Country': 'Argentina',
+      'Population': 0},
+     {'Area': 27, 'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000},
+     {'Area': 2731571, 'City': 'Toronto', 'Country': 'Canada', 'Population': 630},
+     {'Area': 3194,
+      'City': 'Pyeongchang',
+      'Country': 'South Korea',
+      'Population': 2581000}]
+
+
+
 Ok, so the list of countries associated with each city has been assigned to the variable `cities`.  Now we will work with reading and manipulating this list of cities.
 
 ### Working with our list of cities
@@ -81,8 +120,9 @@ First, access the third to last element and set it equal to the variable `salina
 
 
 ```python
-salina = None # {'Area': 27, 'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000}
+salina = None 
 salina
+# {'Area': 27, 'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000}
 ```
 
 Now access the fourth country in the list, and set it's population equal to a variable called `los_cabos_pop`.
@@ -107,6 +147,13 @@ Finally, change the spelling of the South Korean city in the list to the string,
 ```python
 cities[11]['City'] # Pyongyang
 ```
+
+
+
+
+    'Pyeongchang'
+
+
 
 ### Summary
 
