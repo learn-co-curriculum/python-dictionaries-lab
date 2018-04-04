@@ -26,33 +26,61 @@ Let's retrieve the population of the city and assign it to the variable `greenvi
 
 
 ```python
-greenville_population = None # change None
+greenville_population = greenville['Population'] # change None
 greenville_population # 84554
 ```
+
+
+
+
+    84554
+
+
 
 Now retrieve the area of Greenville and assign it to the variable `area`.
 
 
 ```python
-area = None
+area = greenville['Area']
 area # 68
 ```
+
+
+
+
+    68
+
+
 
 Now let's take a look at all of the keys in the `greenville` dictionary and coerce them into a list.  Assign this variable to the list `city_keys`.
 
 
 ```python
-city_keys = None
+city_keys = list(greenville.keys())
 city_keys # ['Area', 'City', 'Country', 'Population']
 ```
+
+
+
+
+    ['Area', 'City', 'Country', 'Population']
+
+
 
 Alright, next let's get all of the values in our greenville dictionary and coerce it into a list.  Assign that list to the variable `city_values`.
 
 
 ```python
-city_values = None
+city_values = list(greenville.values())
 city_values # [68, 'Greenville', 'USA', 84554]
 ```
+
+
+
+
+    [68, 'Greenville', 'USA', 84554]
+
+
 
 ### Working with multiple cities
 
@@ -126,39 +154,60 @@ First, access the third to last element and set it equal to the variable `salina
 
 
 ```python
-salina = None 
+salina = cities[-3] 
 salina
-# {'Area': 27, 'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000}
+# {'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000, 'Area': 27}
 ```
+
+
+
+
+    {'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000, 'Area': 27}
+
+
 
 Now access the fourth country in the list, and set it's population equal to a variable called `los_cabos_pop`.
 
 
 ```python
-los_cabos_pop = None
+los_cabos_pop = cities[3]['Population']
 los_cabos_pop # 287651
 ```
+
+
+
+
+    287651
+
+
 
 Now calculate the number of cities in the list and assign the number to the variabale `city_count`.
 
 
 ```python
-city_count = None
+city_count = len(cities)
 city_count # 12
 ```
+
+
+
+
+    12
+
+
 
 Finally, change the spelling of the South Korean city, Pyeongchang, to the string `'PyeongChang'`, its alternative spelling.
 
 
 ```python
-cities[11]['City'] # 'PyeongChang'
+cities[11]['City'] = 'PyeongChang'
 ```
 
 Now let's work on retrieving a collection of information about a dictionary.  Use the appropriate dictionary function to return a list of values in the dictionary regarding Pyeongchang.   Assign the list to the variable `pyeongchang_values`.
 
 
 ```python
-pyeongchang_values = None
+pyeongchang_values = list(cities[11].values())
 
 pyeongchang_values # ['PyeongChang', 'South Korea', 2581000, 3194]
 type(pyeongchang_values) # list
@@ -167,7 +216,7 @@ type(pyeongchang_values) # list
 
 
 
-    NoneType
+    list
 
 
 
@@ -175,7 +224,7 @@ And now set `pyeongchang_keys` equal to a list of keys in the dictionary regardi
 
 
 ```python
-pyeongchang_keys = None
+pyeongchang_keys = list(cities[11].keys())
 
 
 pyeongchang_keys # ['City', 'Country', 'Population', 'Area']
@@ -185,7 +234,7 @@ type(pyeongchang_keys) # list
 
 
 
-    NoneType
+    list
 
 
 
