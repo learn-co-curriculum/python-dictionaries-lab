@@ -27,9 +27,9 @@ class TestDictionary(unittest.TestCase):
         self.assertEqual(cities[11]['City'], 'PyeongChang')
 
     def test_pyeongchang_keys(self):
-        self.assertEqual(pyeongchang_keys, ['PyeongChang', 'South Korea', 2581000, 3194])
+        self.assertEqual(pyeongchang_keys, ['City', 'Country', 'Population', 'Area'])
         self.assertEqual(type(pyeongchang_keys), type(list()))
 
     def test_pyeongchang_values(self):
-        self.assertEqual(pyeongchang_values, ['City', 'Country', 'Population', 'Area'])
+        self.assertEqual(pyeongchang_values, ['PyeongChang', 'South Korea', 2581000, 3194])
         self.assertEqual(type(pyeongchang_values), type(list()))
