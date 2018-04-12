@@ -9,10 +9,10 @@ class TestDictionary(unittest.TestCase):
         self.assertEqual(area, 68)
 
     def test_city_keys(self):
-        self.assertEqual(city_keys, ['Area', 'City', 'Country', 'Population'])
+        self.assertItemsEqual(city_keys, ['Area', 'City', 'Country', 'Population'])
 
     def test_city_values(self):
-        self.assertEqual(city_values, [68, 'Greenville', 'USA', 84554])
+        self.assertItemsEqual(city_values, [68, 'Greenville', 'USA', 84554])
 
     def test_salina(self):
         self.assertEqual(salina, {'Area': 27, 'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000})
@@ -27,9 +27,9 @@ class TestDictionary(unittest.TestCase):
         self.assertEqual(cities[11]['City'], 'PyeongChang')
 
     def test_pyeongchang_keys(self):
-        self.assertEqual(pyeongchang_keys, ['City', 'Country', 'Population', 'Area'])
+        self.assertItemsEqual(pyeongchang_keys, ['City', 'Country', 'Population', 'Area'])
         self.assertEqual(type(pyeongchang_keys), type(list()))
 
     def test_pyeongchang_values(self):
-        self.assertEqual(pyeongchang_values, ['PyeongChang', 'South Korea', 2581000, 3194])
+        self.assertItemsEqual(pyeongchang_values, ['PyeongChang', 'South Korea', 2581000, 3194])
         self.assertEqual(type(pyeongchang_values), type(list()))
