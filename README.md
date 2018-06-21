@@ -7,9 +7,9 @@ In this lesson, we'll use our knowledge of dictionaries to retrieve data about v
 
 ### Objectives
 
-* Practice retreiving information from dictionaries
+* Practice retrieving information from dictionaries
 * Practice assigning new information to dictionaries
-* Practice retriving information from a list of dictionaries
+* Practice retrieving information from a list of dictionaries
 
 ### Working with a single dictionary
 
@@ -79,45 +79,6 @@ Cool.  We have them!
 cities
 ```
 
-
-
-
-    [{'City': 'Solta', 'Country': 'Croatia', 'Population': 1700, 'Area': 59},
-     {'City': 'Greenville', 'Country': 'USA', 'Population': 84554, 'Area': 68},
-     {'City': 'Buenos Aires',
-      'Country': 'Argentina',
-      'Population': 13591863,
-      'Area': 4758},
-     {'City': 'Los Cabos',
-      'Country': 'Mexico',
-      'Population': 287651,
-      'Area': 3750},
-     {'City': 'Walla Walla Valley',
-      'Country': 'USA',
-      'Population': 32237,
-      'Area': 33},
-     {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850, 'Area': 200},
-     {'City': 'Albuquerque',
-      'Country': 'New Mexico',
-      'Population': 559277,
-      'Area': 491},
-     {'City': 'Archipelago Sea',
-      'Country': 'Finland',
-      'Population': 60000,
-      'Area': 8300},
-     {'City': 'Iguazu Falls',
-      'Country': 'Argentina',
-      'Population': 0,
-      'Area': 672},
-     {'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000, 'Area': 27},
-     {'City': 'Toronto', 'Country': 'Canada', 'Population': 630, 'Area': 2731571},
-     {'City': 'Pyeongchang',
-      'Country': 'South Korea',
-      'Population': 2581000,
-      'Area': 3194}]
-
-
-
 Ok, so the list of countries associated with each city has been assigned to the variable `cities`.  Now we will work with reading and manipulating this list of cities.
 
 ### Working with our list of cities
@@ -139,7 +100,7 @@ los_cabos_pop = None
 los_cabos_pop # 287651
 ```
 
-Now calculate the number of cities in the list and assign the number to the variabale `city_count`.
+Now calculate the number of cities in the list and assign the number to the variable `city_count`.
 
 
 ```python
@@ -151,6 +112,7 @@ Finally, change the spelling of the South Korean city, Pyeongchang, to the strin
 
 
 ```python
+cities[11]['City'] = None
 cities[11]['City'] # 'PyeongChang'
 ```
 
@@ -164,13 +126,6 @@ pyeongchang_values # ['PyeongChang', 'South Korea', 2581000, 3194]
 type(pyeongchang_values) # list
 ```
 
-
-
-
-    NoneType
-
-
-
 And now set `pyeongchang_keys` equal to a list of keys in the dictionary regarding Pyeongchang.
 
 
@@ -181,13 +136,6 @@ pyeongchang_keys = None
 pyeongchang_keys # ['City', 'Country', 'Population', 'Area']
 type(pyeongchang_keys) # list
 ```
-
-
-
-
-    NoneType
-
-
 
 ### Summary
 
