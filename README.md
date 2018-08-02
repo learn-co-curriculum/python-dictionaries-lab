@@ -3,7 +3,7 @@
 
 ### Introduction
 
-In this lesson, we'll use our knowledge of dictionaries to retrieve data about various cities.
+Now that we know about dictionaries in Python, it is time to practice using them. In this lesson, we'll use our knowledge of dictionaries to retrieve and assign data about various cities.
 
 ### Objectives
 
@@ -30,12 +30,12 @@ greenville_population = None # change None
 greenville_population # 84554
 ```
 
-Now retrieve the area of Greenville and assign it to the variable `area`.
+Now retrieve the area of Greenville and assign it to the variable `greenville_area`.
 
 
 ```python
-area = None
-area # 68
+greenville_area = None
+greenville_area # 68
 ```
 
 Now let's take a look at all of the keys in the `greenville` dictionary and coerce them into a list.  Assign this variable to the list `city_keys`.
@@ -56,23 +56,27 @@ city_values # [68, 'Greenville', 'USA', 84554]
 
 ### Working with multiple cities
 
-Once again, we can retrieve our data from a Google Sheet of Travel Cities and Countries [shown here](https://docs.google.com/spreadsheets/d/1BTJMMFH9t4p5UmHj5kiC6PGfMN6yaaaZkocx0mDqTK0/edit#gid=0).  
+We can retrieve our data from an excel or Google sheets like the one [shown here](https://docs.google.com/spreadsheets/d/1BTJMMFH9t4p5UmHj5kiC6PGfMN6yaaaZkocx0mDqTK0/edit#gid=0) named Travel Cities and Countries.
 
 ![](./countries-cities.png)
 
-We already followed the steps of the previous lesson to download the spreadsheet and move it to the current folder.  You can find the file [in the github repository](https://github.com/learn-co-curriculum/python-lists-lab).  So next, we get this data into Python code.  We have written the code for reading excel into Python for you.
+Lukily for us, we already have the spreadsheet downloaded and located in the current folder.  You can find the file [in the github repository](https://github.com/learn-co-curriculum/python-lists-lab). Next, we will use a Library called **Pandas** to get this data from the excel file into Python code. We already have the code for reading an excel file into Python written for us below. Let's check it out.
+
+> **Note:** To import a library or module in Python, we do so by writing `import` followed by the name of the thing we want to import. We can optionally include an *alias* for our import, which is done by writing **as** after the name of the thing we are importing followed by the name we would like to use for our *alias*. **Do not worry** about aliases right now. Just know that the *convention* for importing the pandas library is to import it and alias it as `pd` like we see below. 
 
 
 ```python
-import pandas
+import pandas as pd
 file_name = './cities.xlsx'
-travel_df = pandas.read_excel(file_name)
+travel_df = pd.read_excel(file_name)
 cities = travel_df.to_dict('records')
 ```
 
 > Remember to press shift + enter.
 
-Cool.  We have them!
+Great! We just used pandas to read the data from our excel file and turn each row of data into a dictionary. Again, don't worry about exactly how pandas is doing this, but know that pandas is a great tool when trying to accomplish a task such as turning data from an excel file into data we can use in Python.
+
+Run the cell below to see what our data looks like now.
 
 
 ```python
@@ -139,4 +143,4 @@ type(pyeongchang_keys) # list
 
 ### Summary
 
-In this section we saw how to retrieve and alter data in a dictionary.  We saw how we can retrieve a collection of information about a dictionary, like a list of it's keys and values, and we saw how to work with a list of dictionaries.
+In this section we saw how to retrieve and re-assign data in a dictionary.  We saw how we can retrieve a collection of information from a dictionary, like a list of it's keys and values, and we saw how we can work with a list of dictionaries.
