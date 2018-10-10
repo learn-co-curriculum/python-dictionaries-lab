@@ -181,7 +181,7 @@ los_cabos_pop # 287651
 
 
 
-Now calculate the number of cities in the list and assign the number to the variabale `city_count`.
+Now calculate the number of cities in the list and assign the number to the variable `city_count`.
 
 
 ```python
