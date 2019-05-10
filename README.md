@@ -7,9 +7,9 @@ Now that we know about dictionaries in Python, it is time to practice using them
 
 ### Objectives
 
-* Practice retrieving information from dictionaries
-* Practice assigning new information to dictionaries
-* Practice retrieving information from a list of dictionaries
+- Practice retrieving information from dictionaries
+- Practice assigning new information to dictionaries
+- Practice retrieving information from a list of dictionaries
 
 ### Working with a single dictionary
 
