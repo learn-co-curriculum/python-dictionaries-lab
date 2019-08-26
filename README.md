@@ -128,32 +128,15 @@ Lukily for us, we already have the spreadsheet downloaded and located in the cur
 
 
 ```python
-# __SOLUTION__ 
-import pandas
-import xlrd
+import pandas as pd
 file_name = './cities.xlsx'
-travel_df = pandas.read_excel(file_name)
+travel_df = pd.read_excel(file_name)
 cities = travel_df.to_dict('records')
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    ModuleNotFoundError                       Traceback (most recent call last)
-
-    <ipython-input-7-b82eea3cc681> in <module>()
-          1 import pandas
-    ----> 2 import xlrd
-          3 file_name = './cities.xlsx'
-          4 travel_df = pandas.read_excel(file_name)
-          5 cities = travel_df.to_dict('records')
-
-
-    ModuleNotFoundError: No module named 'xlrd'
-
-
-
 ```python
+# __SOLUTION__ 
 import pandas as pd
 file_name = './cities.xlsx'
 travel_df = pd.read_excel(file_name)
@@ -165,6 +148,11 @@ cities = travel_df.to_dict('records')
 Great! We just used pandas to read the data from our excel file and turn each row of data into a dictionary. Again, don't worry about exactly how pandas is doing this, but know that pandas is a great tool when trying to accomplish a task such as turning data from an excel file into data we can use in Python.
 
 Run the cell below to see what our data looks like now.
+
+
+```python
+cities
+```
 
 
 ```python
@@ -211,16 +199,18 @@ cities
 
 
 
-
-```python
-cities
-```
-
 Ok, so the list of countries associated with each city has been assigned to the variable `cities`.  Now we will work with reading and manipulating this list of cities.
 
 ### Working with our list of cities
 
 First, access the third to last element and set it equal to the variable `salina`.
+
+
+```python
+salina = None 
+salina
+# {'Area': 27, 'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000}
+```
 
 
 ```python
@@ -237,14 +227,13 @@ salina
 
 
 
+Now access the fourth country in the list, and set it's population equal to a variable called `los_cabos_pop`.
+
 
 ```python
-salina = None 
-salina
-# {'Area': 27, 'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000}
+los_cabos_pop = None
+los_cabos_pop # 287651
 ```
-
-Now access the fourth country in the list, and set it's population equal to a variable called `los_cabos_pop`.
 
 
 ```python
@@ -260,13 +249,13 @@ los_cabos_pop # 287651
 
 
 
+Now calculate the number of cities in the list and assign the number to the variable `city_count`.
+
 
 ```python
-los_cabos_pop = None
-los_cabos_pop # 287651
+city_count = None
+city_count # 12
 ```
-
-Now calculate the number of cities in the list and assign the number to the variable `city_count`.
 
 
 ```python
@@ -282,19 +271,7 @@ city_count # 12
 
 
 
-
-```python
-city_count = None
-city_count # 12
-```
-
 Finally, change the spelling of the South Korean city, Pyeongchang, to the string `'PyeongChang'`, its alternative spelling.
-
-
-```python
-# __SOLUTION__ 
-cities[11]['City'] = 'PyeongChang'
-```
 
 
 ```python
@@ -302,7 +279,21 @@ cities[11]['City'] = None
 cities[11]['City'] # 'PyeongChang'
 ```
 
+
+```python
+# __SOLUTION__ 
+cities[11]['City'] = 'PyeongChang'
+```
+
 Now let's work on retrieving a collection of information about a dictionary.  Use the appropriate dictionary function to return a list of values in the dictionary regarding Pyeongchang.   Assign the list to the variable `pyeongchang_values`.
+
+
+```python
+pyeongchang_values = None
+
+pyeongchang_values # ['PyeongChang', 'South Korea', 2581000, 3194]
+type(pyeongchang_values) # list
+```
 
 
 ```python
@@ -320,15 +311,16 @@ type(pyeongchang_values) # list
 
 
 
+And now set `pyeongchang_keys` equal to a list of keys in the dictionary regarding Pyeongchang.
+
 
 ```python
-pyeongchang_values = None
+pyeongchang_keys = None
 
-pyeongchang_values # ['PyeongChang', 'South Korea', 2581000, 3194]
-type(pyeongchang_values) # list
+
+pyeongchang_keys # ['City', 'Country', 'Population', 'Area']
+type(pyeongchang_keys) # list
 ```
-
-And now set `pyeongchang_keys` equal to a list of keys in the dictionary regarding Pyeongchang.
 
 
 ```python
@@ -346,15 +338,6 @@ type(pyeongchang_keys) # list
     list
 
 
-
-
-```python
-pyeongchang_keys = None
-
-
-pyeongchang_keys # ['City', 'Country', 'Population', 'Area']
-type(pyeongchang_keys) # list
-```
 
 ### Summary
 
