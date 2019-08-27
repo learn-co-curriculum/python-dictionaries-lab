@@ -17,13 +17,13 @@ Here is a dictionary representing the city of Greenville, North Carolina.  The a
 
 
 ```python
-greenville = {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 84554}
+greenville = {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 93137}
 ```
 
 
 ```python
 # __SOLUTION__ 
-greenville = {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 84554}
+greenville = {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 93137}
 ```
 
 > Remember to press shift + enter to run the code.
@@ -33,20 +33,20 @@ Let's retrieve the population of the city and assign it to the variable `greenvi
 
 ```python
 greenville_population = None # change None
-greenville_population # 84554
+greenville_population # 93137
 ```
 
 
 ```python
 # __SOLUTION__ 
 greenville_population = greenville['Population'] # change None
-greenville_population # 84554
+greenville_population # 93137
 ```
 
 
 
 
-    84554
+    93137
 
 
 
@@ -99,30 +99,30 @@ Alright, next let's get all of the values in our greenville dictionary and coerc
 
 ```python
 city_values = None
-city_values # [68, 'Greenville', 'USA', 84554]
+city_values # [68, 'Greenville', 'USA', 93137]
 ```
 
 
 ```python
 # __SOLUTION__ 
 city_values = list(greenville.values())
-city_values # [68, 'Greenville', 'USA', 84554]
+city_values # [68, 'Greenville', 'USA', 93137]
 ```
 
 
 
 
-    [68, 'Greenville', 'USA', 84554]
+    [68, 'Greenville', 'USA', 93137]
 
 
 
 ### Working with multiple cities
 
-We can retrieve our data from an excel or Google sheets like the one [shown here](https://docs.google.com/spreadsheets/d/1BTJMMFH9t4p5UmHj5kiC6PGfMN6yaaaZkocx0mDqTK0/edit#gid=0) named Travel Cities and Countries.
+We can retrieve our data from an excel or Google sheets like the one [shown here](https://docs.google.com/spreadsheets/d/1kv8z2lZ3NLWbJcdE6ysd40BZLresdl5W6mWrtIunMn4/edit?usp=sharing) named Travel Cities and Countries.
 
-![](./countries-cities.png)
+<img src="./countries-cities.png" width="500">
 
-Lukily for us, we already have the spreadsheet downloaded and located in the current folder.  You can find the file [in the github repository](https://github.com/learn-co-curriculum/python-lists-lab). Next, we will use a Library called **Pandas** to get this data from the excel file into Python code. We already have the code for reading an excel file into Python written for us below. Let's check it out.
+Lukily for us, we already have the spreadsheet downloaded and located in the current folder.  You can find the file [in the github repository](https://github.com/learn-co-curriculum/python-dictionaries-lab/tree/solution). Next, we will use a Library called **Pandas** to get this data from the excel file into Python code. We already have the code for reading an excel file into Python written for us below. Let's check it out.
 
 > **Note:** To import a library or module in Python, we do so by writing `import` followed by the name of the thing we want to import. We can optionally include an *alias* for our import, which is done by writing **as** after the name of the thing we are importing followed by the name we would like to use for our *alias*. **Do not worry** about aliases right now. Just know that the *convention* for importing the pandas library is to import it and alias it as `pd` like we see below. 
 
@@ -163,39 +163,36 @@ cities
 
 
 
-    [{'City': 'Solta', 'Country': 'Croatia', 'Population': 1700, 'Area': 59},
-     {'City': 'Greenville', 'Country': 'USA', 'Population': 84554, 'Area': 68},
-     {'City': 'Buenos Aires',
+    [{'City': 'Buenos Aires',
       'Country': 'Argentina',
-      'Population': 13591863,
-      'Area': 4758},
+      'Population': 2891082,
+      'Area': 203},
+     {'City': 'Toronto', 'Country': 'Canada', 'Population': 2731571, 'Area': 630},
+     {'City': 'Pyeongchang',
+      'Country': 'South Korea',
+      'Population': 43666,
+      'Area': 1464},
+     {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850, 'Area': 230},
+     {'City': 'Albuquerque', 'Country': 'USA', 'Population': 558545, 'Area': 491},
      {'City': 'Los Cabos',
       'Country': 'Mexico',
-      'Population': 287651,
-      'Area': 3750},
-     {'City': 'Walla Walla Valley',
-      'Country': 'USA',
-      'Population': 32237,
-      'Area': 33},
-     {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850, 'Area': 200},
-     {'City': 'Albuquerque',
-      'Country': 'New Mexico',
-      'Population': 559277,
-      'Area': 491},
+      'Population': 287671,
+      'Area': 3751},
+     {'City': 'Greenville', 'Country': 'USA', 'Population': 93137, 'Area': 68},
      {'City': 'Archipelago Sea',
       'Country': 'Finland',
       'Population': 60000,
-      'Area': 8300},
+      'Area': 2000},
+     {'City': 'Walla Walla Valley',
+      'Country': 'USA',
+      'Population': 32986,
+      'Area': 35},
+     {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26},
+     {'City': 'Solta', 'Country': 'Croatia', 'Population': 1700, 'Area': 59},
      {'City': 'Iguazu Falls',
       'Country': 'Argentina',
       'Population': 0,
-      'Area': 672},
-     {'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000, 'Area': 27},
-     {'City': 'Toronto', 'Country': 'Canada', 'Population': 630, 'Area': 2731571},
-     {'City': 'Pyeongchang',
-      'Country': 'South Korea',
-      'Population': 2581000,
-      'Area': 3194}]
+      'Area': 2396}]
 
 
 
@@ -209,7 +206,7 @@ First, access the third to last element and set it equal to the variable `salina
 ```python
 salina = None 
 salina
-# {'Area': 27, 'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000}
+# {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26}
 ```
 
 
@@ -217,35 +214,35 @@ salina
 # __SOLUTION__ 
 salina = cities[-3] 
 salina
-# {'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000, 'Area': 27}
+# {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26}
 ```
 
 
 
 
-    {'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000, 'Area': 27}
+    {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26}
 
 
 
-Now access the fourth country in the list, and set it's population equal to a variable called `los_cabos_pop`.
+Now access the sixth country in the list, and set it's population equal to a variable called `los_cabos_pop`.
 
 
 ```python
 los_cabos_pop = None
-los_cabos_pop # 287651
+los_cabos_pop # 287671
 ```
 
 
 ```python
 # __SOLUTION__ 
-los_cabos_pop = cities[3]['Population']
-los_cabos_pop # 287651
+los_cabos_pop = cities[5]['Population']
+los_cabos_pop # 287671
 ```
 
 
 
 
-    287651
+    287671
 
 
 
@@ -275,14 +272,14 @@ Finally, change the spelling of the South Korean city, Pyeongchang, to the strin
 
 
 ```python
-cities[11]['City'] = None
-cities[11]['City'] # 'PyeongChang'
+cities[2]['City'] = None
+cities[2]['City'] # 'PyeongChang'
 ```
 
 
 ```python
 # __SOLUTION__ 
-cities[11]['City'] = 'PyeongChang'
+cities[2]['City'] = 'PyeongChang'
 ```
 
 Now let's work on retrieving a collection of information about a dictionary.  Use the appropriate dictionary function to return a list of values in the dictionary regarding Pyeongchang.   Assign the list to the variable `pyeongchang_values`.
@@ -291,16 +288,16 @@ Now let's work on retrieving a collection of information about a dictionary.  Us
 ```python
 pyeongchang_values = None
 
-pyeongchang_values # ['PyeongChang', 'South Korea', 2581000, 3194]
+pyeongchang_values # ['PyeongChang', 'South Korea', 43666, 1464]
 type(pyeongchang_values) # list
 ```
 
 
 ```python
 # __SOLUTION__ 
-pyeongchang_values = list(cities[11].values())
+pyeongchang_values = list(cities[2].values())
 
-pyeongchang_values # ['PyeongChang', 'South Korea', 2581000, 3194]
+pyeongchang_values # ['PyeongChang', 'South Korea', 43666, 1464]
 type(pyeongchang_values) # list
 ```
 
@@ -325,7 +322,7 @@ type(pyeongchang_keys) # list
 
 ```python
 # __SOLUTION__ 
-pyeongchang_keys = list(cities[11].keys())
+pyeongchang_keys = list(cities[2].keys())
 
 
 pyeongchang_keys # ['City', 'Country', 'Population', 'Area']
