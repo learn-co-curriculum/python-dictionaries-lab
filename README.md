@@ -17,13 +17,13 @@ Here is a dictionary representing the city of Greenville, North Carolina.  The a
 
 
 ```python
-greenville = {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 93137}
+greenville = {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 93}
 ```
 
 
 ```python
 # __SOLUTION__ 
-greenville = {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 93137}
+greenville = {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 93}
 ```
 
 > Remember to press shift + enter to run the code.
@@ -33,20 +33,20 @@ Let's retrieve the population of the city and assign it to the variable `greenvi
 
 ```python
 greenville_population = None # change None
-greenville_population # 93137
+greenville_population # 93
 ```
 
 
 ```python
 # __SOLUTION__ 
 greenville_population = greenville['Population'] # change None
-greenville_population # 93137
+greenville_population # 93
 ```
 
 
 
 
-    93137
+    93
 
 
 
@@ -99,20 +99,20 @@ Alright, next let's get all of the values in our greenville dictionary and coerc
 
 ```python
 city_values = None
-city_values # [68, 'Greenville', 'USA', 93137]
+city_values # [68, 'Greenville', 'USA', 93]
 ```
 
 
 ```python
 # __SOLUTION__ 
 city_values = list(greenville.values())
-city_values # [68, 'Greenville', 'USA', 93137]
+city_values # [68, 'Greenville', 'USA', 93]
 ```
 
 
 
 
-    [68, 'Greenville', 'USA', 93137]
+    [68, 'Greenville', 'USA', 93]
 
 
 
@@ -165,30 +165,27 @@ cities
 
     [{'City': 'Buenos Aires',
       'Country': 'Argentina',
-      'Population': 2891082,
+      'Population': 2891,
       'Area': 203},
-     {'City': 'Toronto', 'Country': 'Canada', 'Population': 2731571, 'Area': 630},
-     {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850, 'Area': 230},
-     {'City': 'Albuquerque', 'Country': 'USA', 'Population': 558545, 'Area': 491},
-     {'City': 'Los Cabos',
-      'Country': 'Mexico',
-      'Population': 287671,
-      'Area': 3751},
-     {'City': 'Greenville', 'Country': 'USA', 'Population': 93137, 'Area': 68},
+     {'City': 'Toronto', 'Country': 'Canada', 'Population': 2732, 'Area': 630},
+     {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 929, 'Area': 230},
+     {'City': 'Albuquerque', 'Country': 'USA', 'Population': 559, 'Area': 491},
+     {'City': 'Los Cabos', 'Country': 'Mexico', 'Population': 288, 'Area': 3751},
+     {'City': 'Greenville', 'Country': 'USA', 'Population': 93, 'Area': 68},
      {'City': 'Archipelago Sea',
       'Country': 'Finland',
-      'Population': 60000,
+      'Population': 60,
       'Area': 2000},
      {'City': 'Pyeongchang',
       'Country': 'South Korea',
-      'Population': 43666,
+      'Population': 44,
       'Area': 1464},
      {'City': 'Walla Walla Valley',
       'Country': 'USA',
-      'Population': 32986,
+      'Population': 33,
       'Area': 35},
-     {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26},
-     {'City': 'Solta', 'Country': 'Croatia', 'Population': 1700, 'Area': 59},
+     {'City': 'Salina Island', 'Country': 'Italy', 'Population': 3, 'Area': 26},
+     {'City': 'Solta', 'Country': 'Croatia', 'Population': 2, 'Area': 59},
      {'City': 'Iguazu Falls',
       'Country': 'Argentina',
       'Population': 0,
@@ -220,7 +217,7 @@ salina
 
 
 
-    {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26}
+    {'City': 'Salina Island', 'Country': 'Italy', 'Population': 3, 'Area': 26}
 
 
 
@@ -229,20 +226,20 @@ Now access the fifth country in the list, and set it's population equal to a var
 
 ```python
 los_cabos_pop = None
-los_cabos_pop # 287671
+los_cabos_pop # 288
 ```
 
 
 ```python
 # __SOLUTION__ 
 los_cabos_pop = cities[4]['Population']
-los_cabos_pop # 287671
+los_cabos_pop # 288
 ```
 
 
 
 
-    287671
+    288
 
 
 
