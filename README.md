@@ -168,10 +168,6 @@ cities
       'Population': 2891082,
       'Area': 203},
      {'City': 'Toronto', 'Country': 'Canada', 'Population': 2731571, 'Area': 630},
-     {'City': 'Pyeongchang',
-      'Country': 'South Korea',
-      'Population': 43666,
-      'Area': 1464},
      {'City': 'Marakesh', 'Country': 'Morocco', 'Population': 928850, 'Area': 230},
      {'City': 'Albuquerque', 'Country': 'USA', 'Population': 558545, 'Area': 491},
      {'City': 'Los Cabos',
@@ -183,6 +179,10 @@ cities
       'Country': 'Finland',
       'Population': 60000,
       'Area': 2000},
+     {'City': 'Pyeongchang',
+      'Country': 'South Korea',
+      'Population': 43666,
+      'Area': 1464},
      {'City': 'Walla Walla Valley',
       'Country': 'USA',
       'Population': 32986,
@@ -224,7 +224,7 @@ salina
 
 
 
-Now access the sixth country in the list, and set it's population equal to a variable called `los_cabos_pop`.
+Now access the fifth country in the list, and set it's population equal to a variable called `los_cabos_pop`.
 
 
 ```python
@@ -235,7 +235,7 @@ los_cabos_pop # 287671
 
 ```python
 # __SOLUTION__ 
-los_cabos_pop = cities[5]['Population']
+los_cabos_pop = cities[4]['Population']
 los_cabos_pop # 287671
 ```
 
@@ -272,14 +272,14 @@ Finally, change the spelling of the South Korean city, Pyeongchang, to the strin
 
 
 ```python
-cities[2]['City'] = None
-cities[2]['City'] # 'PyeongChang'
+cities[7]['City'] = None
+cities[7]['City'] # 'PyeongChang'
 ```
 
 
 ```python
 # __SOLUTION__ 
-cities[2]['City'] = 'PyeongChang'
+cities[7]['City'] = 'PyeongChang'
 ```
 
 Now let's work on retrieving a collection of information about a dictionary.  Use the appropriate dictionary function to return a list of values in the dictionary regarding Pyeongchang.   Assign the list to the variable `pyeongchang_values`.
@@ -295,7 +295,7 @@ type(pyeongchang_values) # list
 
 ```python
 # __SOLUTION__ 
-pyeongchang_values = list(cities[2].values())
+pyeongchang_values = list(cities[7].values())
 
 pyeongchang_values # ['PyeongChang', 'South Korea', 43666, 1464]
 type(pyeongchang_values) # list
@@ -322,7 +322,7 @@ type(pyeongchang_keys) # list
 
 ```python
 # __SOLUTION__ 
-pyeongchang_keys = list(cities[2].keys())
+pyeongchang_keys = list(cities[7].keys())
 
 
 pyeongchang_keys # ['City', 'Country', 'Population', 'Area']
