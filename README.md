@@ -13,7 +13,7 @@ Now that we know about dictionaries in Python, it is time to practice using them
 
 ### Working with a single dictionary
 
-Here is a dictionary representing the city of Greenville, North Carolina.  The area is in kilometers squared.
+Here is a dictionary representing the city of Greenville, North Carolina.  The population is in units of 1000 people. The area is in units of kilometers squared.
 
 
 ```python
