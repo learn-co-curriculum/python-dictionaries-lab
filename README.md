@@ -13,11 +13,11 @@ Now that we know about dictionaries in Python, it is time to practice using them
 
 ### Working with a single dictionary
 
-Here is a dictionary representing the city of Greenville, North Carolina.  The area is in kilometers squared.
+Here is a dictionary representing the city of Greenville, North Carolina.  The population is in units of 1000 people. The area is in units of kilometers squared.
 
 
 ```python
-greenville = {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 84554}
+greenville = {'Area': 68, 'City': 'Greenville', 'Country': 'USA', 'Population': 93}
 ```
 
 > Remember to press shift + enter to run the code.
@@ -27,7 +27,7 @@ Let's retrieve the population of the city and assign it to the variable `greenvi
 
 ```python
 greenville_population = None # change None
-greenville_population # 84554
+greenville_population # 93
 ```
 
 Now retrieve the area of Greenville and assign it to the variable `greenville_area`.
@@ -51,16 +51,16 @@ Alright, next let's get all of the values in our greenville dictionary and coerc
 
 ```python
 city_values = None
-city_values # [68, 'Greenville', 'USA', 84554]
+city_values # [68, 'Greenville', 'USA', 93]
 ```
 
 ### Working with multiple cities
 
-We can retrieve our data from an excel or Google sheets like the one [shown here](https://docs.google.com/spreadsheets/d/1BTJMMFH9t4p5UmHj5kiC6PGfMN6yaaaZkocx0mDqTK0/edit#gid=0) named Travel Cities and Countries.
+We can retrieve our data from an excel or Google sheets like the one [shown here](https://docs.google.com/spreadsheets/d/1kv8z2lZ3NLWbJcdE6ysd40BZLresdl5W6mWrtIunMn4/edit?usp=sharing) named Travel Cities and Countries.
 
-![](./countries-cities.png)
+<img src="./countries-cities.png" width="500">
 
-Lukily for us, we already have the spreadsheet downloaded and located in the current folder.  You can find the file [in the github repository](https://github.com/learn-co-curriculum/python-lists-lab). Next, we will use a Library called **Pandas** to get this data from the excel file into Python code. We already have the code for reading an excel file into Python written for us below. Let's check it out.
+Lukily for us, we already have the spreadsheet downloaded and located in the current folder.  You can find the file [in the github repository](https://github.com/learn-co-curriculum/python-dictionaries-lab/tree/solution). Next, we will use a Library called **Pandas** to get this data from the excel file into Python code. We already have the code for reading an excel file into Python written for us below. Let's check it out.
 
 > **Note:** To import a library or module in Python, we do so by writing `import` followed by the name of the thing we want to import. We can optionally include an *alias* for our import, which is done by writing **as** after the name of the thing we are importing followed by the name we would like to use for our *alias*. **Do not worry** about aliases right now. Just know that the *convention* for importing the pandas library is to import it and alias it as `pd` like we see below. 
 
@@ -93,15 +93,15 @@ First, access the third to last element and set it equal to the variable `salina
 ```python
 salina = None 
 salina
-# {'Area': 27, 'City': 'Salina Island', 'Country': 'Italy', 'Population': 4000}
+# {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26}
 ```
 
-Now access the fourth country in the list, and set it's population equal to a variable called `los_cabos_pop`.
+Now access the fifth country in the list, and set it's population equal to a variable called `los_cabos_pop`.
 
 
 ```python
 los_cabos_pop = None
-los_cabos_pop # 287651
+los_cabos_pop # 288
 ```
 
 Now calculate the number of cities in the list and assign the number to the variable `city_count`.
@@ -116,8 +116,8 @@ Finally, change the spelling of the South Korean city, Pyeongchang, to the strin
 
 
 ```python
-cities[11]['City'] = None
-cities[11]['City'] # 'PyeongChang'
+cities[7]['City'] = None
+cities[7]['City'] # 'PyeongChang'
 ```
 
 Now let's work on retrieving a collection of information about a dictionary.  Use the appropriate dictionary function to return a list of values in the dictionary regarding Pyeongchang.   Assign the list to the variable `pyeongchang_values`.
@@ -126,7 +126,7 @@ Now let's work on retrieving a collection of information about a dictionary.  Us
 ```python
 pyeongchang_values = None
 
-pyeongchang_values # ['PyeongChang', 'South Korea', 2581000, 3194]
+pyeongchang_values # ['PyeongChang', 'South Korea', 43666, 1464]
 type(pyeongchang_values) # list
 ```
 
