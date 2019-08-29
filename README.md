@@ -208,13 +208,12 @@ Now let's work on retrieving a collection of information about a dictionary.  Us
 pyeongchang_values = list(cities[7].values())
 
 pyeongchang_values # ['PyeongChang', 'South Korea', 43666, 1464]
-type(pyeongchang_values) # list
 ```
 
 
 
 
-    list
+    ['PyeongChang', 'South Korea', 44, 1464]
 
 
 
@@ -224,15 +223,13 @@ And now set `pyeongchang_keys` equal to a list of keys in the dictionary regardi
 ```python
 pyeongchang_keys = list(cities[7].keys())
 
-
 pyeongchang_keys # ['City', 'Country', 'Population', 'Area']
-type(pyeongchang_keys) # list
 ```
 
 
 
 
-    list
+    ['City', 'Country', 'Population', 'Area']
 
 
 
