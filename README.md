@@ -127,8 +127,24 @@ Now let's work on retrieving a collection of information about a dictionary.  Us
 pyeongchang_values = None
 
 pyeongchang_values # ['PyeongChang', 'South Korea', 43666, 1464]
+```
+
+
+```python
 type(pyeongchang_values) # list
 ```
+
+
+```python
+type(pyeongchang_values) # list
+```
+
+
+
+
+    list
+
+
 
 And now set `pyeongchang_keys` equal to a list of keys in the dictionary regarding Pyeongchang.
 
@@ -136,10 +152,25 @@ And now set `pyeongchang_keys` equal to a list of keys in the dictionary regardi
 ```python
 pyeongchang_keys = None
 
-
 pyeongchang_keys # ['City', 'Country', 'Population', 'Area']
+```
+
+
+```python
 type(pyeongchang_keys) # list
 ```
+
+
+```python
+type(pyeongchang_keys) # list
+```
+
+
+
+
+    list
+
+
 
 ### Summary
 
