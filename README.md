@@ -290,11 +290,6 @@ pyeongchang_values # ['PyeongChang', 'South Korea', 43666, 1464]
 
 
 ```python
-type(pyeongchang_values) # list
-```
-
-
-```python
 # __SOLUTION__ 
 pyeongchang_values = list(cities[7].values())
 
@@ -310,6 +305,12 @@ pyeongchang_values # ['PyeongChang', 'South Korea', 43666, 1464]
 
 
 ```python
+type(pyeongchang_values) # list
+```
+
+
+```python
+# __SOLUTION__
 type(pyeongchang_values) # list
 ```
 
@@ -331,11 +332,6 @@ pyeongchang_keys # ['City', 'Country', 'Population', 'Area']
 
 
 ```python
-type(pyeongchang_keys) # list
-```
-
-
-```python
 # __SOLUTION__ 
 pyeongchang_keys = list(cities[7].keys())
 
@@ -351,6 +347,12 @@ pyeongchang_keys # ['City', 'Country', 'Population', 'Area']
 
 
 ```python
+type(pyeongchang_keys) # list
+```
+
+
+```python
+# __SOLUTION__
 type(pyeongchang_keys) # list
 ```
 
