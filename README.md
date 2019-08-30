@@ -134,18 +134,6 @@ pyeongchang_values # ['PyeongChang', 'South Korea', 43666, 1464]
 type(pyeongchang_values) # list
 ```
 
-
-```python
-type(pyeongchang_values) # list
-```
-
-
-
-
-    list
-
-
-
 And now set `pyeongchang_keys` equal to a list of keys in the dictionary regarding Pyeongchang.
 
 
@@ -159,18 +147,6 @@ pyeongchang_keys # ['City', 'Country', 'Population', 'Area']
 ```python
 type(pyeongchang_keys) # list
 ```
-
-
-```python
-type(pyeongchang_keys) # list
-```
-
-
-
-
-    list
-
-
 
 ### Summary
 
