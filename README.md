@@ -93,7 +93,7 @@ First, access the third to last element and set it equal to the variable `salina
 ```python
 salina = None 
 salina
-# {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26}
+# {'City': 'Salina Island', 'Country': 'Italy', 'Population': 3, 'Area': 26}
 ```
 
 Now access the fifth country in the list, and set it's population equal to a variable called `los_cabos_pop`.
@@ -126,7 +126,7 @@ Now let's work on retrieving a collection of information about a dictionary.  Us
 ```python
 pyeongchang_values = None
 
-pyeongchang_values # ['PyeongChang', 'South Korea', 43666, 1464]
+pyeongchang_values # ['PyeongChang', 'South Korea', 44, 1464]
 ```
 
 
