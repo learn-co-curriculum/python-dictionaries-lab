@@ -154,7 +154,7 @@ First, access the third to last element and set it equal to the variable `salina
 ```python
 salina = cities[-3] 
 salina
-# {'City': 'Salina Island', 'Country': 'Italy', 'Population': 2598, 'Area': 26}
+# {'City': 'Salina Island', 'Country': 'Italy', 'Population': 3, 'Area': 26}
 ```
 
 
@@ -207,7 +207,7 @@ Now let's work on retrieving a collection of information about a dictionary.  Us
 ```python
 pyeongchang_values = list(cities[7].values())
 
-pyeongchang_values # ['PyeongChang', 'South Korea', 43666, 1464]
+pyeongchang_values # ['PyeongChang', 'South Korea', 44, 1464]
 ```
 
 
